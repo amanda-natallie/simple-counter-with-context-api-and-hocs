@@ -21,11 +21,13 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Other */
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "*": ["*", "src/*"]
-    }
+      "*": ["src/*"]
+    },
+    "esModuleInterop": true
   },
   "include": ["src"],
+  "exclude": ["./cypress.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

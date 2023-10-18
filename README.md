@@ -1,32 +1,49 @@
 # Simple Counter with Context API & Hooks
 
+This is a simple example of a counter feature being handled by 3 different components using React Context and Hooks.
+
+## Screenshot
+
+![Screenshot](./screenshot.png)
+
 ## Project Structure
 
 ```bash
 ├── .husky # pre-commit hooks
 │   └── commit-msg # commit message convention
 │   └── pre-commit # script to run ESLint, Prettier, Type Check, Cypress E2E tests and Jest Unit tests
+├── .vscode # VSCode Config
+│   └── extensions.json # extensions recomendations
 ├── cypress # Cypress end-to-end tests
-│   ├── fixtures # mock data
-│   ├── integration # test files
-│   ├── plugins # plugins
-│   └── support # reusable functions
+│   ├── e2e # test files
+│   ├── fixtures # example mocked data
+│   ├── support # reusable functions
+│   │   ├── commands.ts # custom commands
+│   │   ├── component-index.html # component index
+│   │   ├── e2e.ts # load custom commands
+│   │   └── utils.tsx # Cypress util functions
 ├── public
 ├── src
+│   ├── components # reusable components
+│   │   ├── components.tsx # contains components A, B and C
+│   │   ├── display-value.tsx # component to display the current value
+│   │   ├── higher-order-component.tsx # HOC to be used on components
+│   │   └── styles.ts # styled components for all components
+│   ├── contexts # context providers
+│   │   └── index.tsx
+│   ├── pages
+│   │   ├── home.tsx # page component
+│   │   └── styles.ts # home page styled components
 │   ├── test # Jest unit tests
 │   │   ├── __tests__ # test files
 │   │   │   └── app.test.tsx
 │   │   └── __mocks__ # mock files
 │   │      └── file-mock.ts # mock file imports
-│   ├── components # reusable components
-│   │   ├── component-a.tsx
-│   │   ├── component-b.tsx
-│   │   ├── component-c.tsx
-│   │   └── HOC
-│   │      └── higher-order-component.tsx
-│   ├── contexts # context providers
-│   │   └── index.tsx
-│   ├── App.tsx # main app component
+│   ├── theme
+│   │   ├── global-styles.ts # global styles & reset
+│   │   ├── colors.ts # palette
+│   │   └── index.ts # theme default export
+│   ├── app.tsx # main app component
 │   ├── main.tsx # entry point
 │   ├── vite-env.d.ts # vite types
 │   └── setupTests.ts # setup file for Jest
@@ -53,8 +70,8 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/amanda-natallie/simple-counter-with-context-api-and-hocs.git
+code simple-counter-with-context-api-and-hocs # if you use VSCode (which is strongly recomended)
 ```
 
 2. Install dependencies:
@@ -75,37 +92,27 @@ yarn dev
 
 In the project directory, you can run:
 
-### `yarn dev`
+```bash
+yarn dev # Runs the app in the development mode.
 
-Runs the app in the development mode.
+yarn build # Builds the app for production to the `dist` folder.
 
-### `yarn build`
+yarn serve # Serves the production build from the `dist` folder.
 
-Builds the app for production to the `dist` folder.
+yarn lint #Lints the code using ESLint.
 
-### `yarn serve`
+yarn prettier #Formats the code using Prettier.
 
-Serves the production build from the `dist` folder.
+yarn type-check #Checks the types using TypeScript.
 
-### `yarn lint`
+yarn test:unit #Runs unit tests using Jest.
 
-Lints the code using ESLint.
+yarn test:e2e #Runs E2E Tests using Cypress.
 
-### `yarn prettier`
+yarn test:e2e:open #Open the Cypress interface to run E2E Tests.
 
-Formats the code using Prettier.
-
-### `yarn type-check`
-
-Checks the types using TypeScript.
-
-### `yarn test`
-
-Runs unit tests using Jest.
-
-### `yarn test:watch`
-
-Runs unit tests using Jest in watch mode.
+yarn test #Runs unit tests using Jest and E2E Tests using Cypress.
+```
 
 ### Architecture Decisions
 
@@ -120,18 +127,3 @@ Runs unit tests using Jest in watch mode.
 - [Cypress](https://www.cypress.io/) was chosen as the end-to-end testing framework for this project because it is an end-to-end testing framework that enables me to write and run automated tests for web applications. It provides a rich set of features, including real-time browser preview, debugging, and cross-browser testing capabilities.
 - [React](https://reactjs.org/) was chosen as the UI library for this project because it is the most popular JavaScript UI library.
 - [React Context](https://reactjs.org/docs/context.html) was chosen as the state management solution for this project because it is built into React.
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html) were chosen as the way to manage state for this project because they are built into React.
-
-## Learn More About the Technologies Used
-
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://typicode.github.io/husky/#/)
-- [CommitLint](https://commitlint.js.org/#/)
-- [Jest](https://jestjs.io/)
-- [Cypress](https://www.cypress.io/)
-- [React](https://reactjs.org/)
-- [React Context](https://reactjs.org/docs/context.html)
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html)

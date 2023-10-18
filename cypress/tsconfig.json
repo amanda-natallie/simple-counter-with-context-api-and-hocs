@@ -1,0 +1,7 @@
+{
+  "files": ["../cypress.config.ts", "./e2e/app.cy.tsx"],
+  "include": ["support"],
+  "compilerOptions": {
+    "jsx": "react"
+  }
+}

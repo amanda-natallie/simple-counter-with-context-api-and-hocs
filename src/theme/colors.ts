@@ -1,7 +1,7 @@
 const palette = {
   system: {
     decrease: '#DD1F4A',
-    increase: '#10446a',
+    increase: 'rgb(16, 68, 106)',
   },
   text: {
     primary: '#145685',

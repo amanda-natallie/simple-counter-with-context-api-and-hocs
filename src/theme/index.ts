@@ -1,8 +1,8 @@
-import pallete from './colors'
+import palette from './colors'
 export { default as GlobalStyles } from './global-styles'
 
 const theme = {
-  pallete,
+  palette,
 }
 
 export default theme
