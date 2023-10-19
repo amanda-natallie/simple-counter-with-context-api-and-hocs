@@ -1,11 +1,11 @@
+import { FC } from 'react'
+import { StyledBoxesWrapper, StyledHomeWrapper } from './styles'
 import {
   ComponentAWithHOC,
   ComponentBWithHOC,
   ComponentCWithHOC,
-} from 'components/components'
-import DisplayValue from 'components/display-value'
-import { FC } from 'react'
-import { StyledBoxesWrapper, StyledHomeWrapper } from './styles'
+} from '../components/components'
+import DisplayValue from '../components/display-value'
 
 const Home: FC = () => {
   return (

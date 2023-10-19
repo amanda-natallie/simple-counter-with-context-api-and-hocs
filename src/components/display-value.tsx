@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ValueContext } from 'contexts'
 import { StyledDisplayValue } from './styles'
+import { ValueContext } from '../contexts'
 
 const DisplayValue: React.FC = () => {
   const value = useContext(ValueContext)

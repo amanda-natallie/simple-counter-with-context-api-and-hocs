@@ -20,11 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Other */
-    "baseUrl": "./",
-    "paths": {
-      "*": ["src/*"]
-    },
     "esModuleInterop": true
   },
   "include": ["src"],

@@ -1,5 +1,5 @@
-import { StateContext } from 'contexts'
 import React, { useContext } from 'react'
+import { StateContext } from '../contexts'
 
 const HigherOrderComponent = (
   WrappedComponent: React.ComponentType<{
