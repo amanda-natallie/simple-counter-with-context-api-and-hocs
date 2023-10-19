@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import palette from 'theme/colors'
+import theme from 'theme'
 
 const flexStyles = css`
   display: flex;
@@ -15,8 +15,8 @@ export const StyledGenericBox = styled.article`
   padding: 30px;
   width: 33.33%;
   border-radius: 8px;
-  border: 1px solid ${palette.grayScale[500]};
-  background-color: ${palette.grayScale[50]};
+  border: 1px solid ${theme.palette.grayScale[500]};
+  background-color: ${theme.palette.grayScale[50]};
 
   & p {
     text-align: center;
@@ -29,18 +29,18 @@ export const StyledGenericBox = styled.article`
     outline: none;
     border: 0;
     font-size: 18px;
-    color: ${palette.grayScale[50]};
+    color: ${theme.palette.grayScale[50]};
     transition: all 0.3s ease;
 
     &:hover {
-      box-shadow: 10px 10px 21px -4px ${palette.grayScale.shadow};
+      box-shadow: 10px 10px 21px -4px ${theme.palette.grayScale.shadow};
     }
     &:first-of-type {
-      background-color: ${palette.system.increase};
+      background-color: ${theme.palette.system.increase};
     }
 
     &:last-of-type {
-      background-color: ${palette.system.decrease};
+      background-color: ${theme.palette.system.decrease};
     }
   }
 
@@ -77,6 +77,12 @@ export const StyledGenericBox = styled.article`
   @media (max-width: 328px) {
     & button {
       width: 40%;
+    }
+  }
+
+  @media (min-width: 1939px) {
+    & p {
+      width: 100%;
     }
   }
 `

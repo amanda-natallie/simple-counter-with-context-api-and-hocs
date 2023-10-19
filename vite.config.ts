@@ -21,5 +21,16 @@ const config: ViteConfig = {
     minify: true,
   },
   base: './',
+  resolve: {
+    alias: {
+      app: './src/app.tsx',
+      theme: './src/theme/index.ts',
+      contexts: './src/contexts/index.tsx',
+      'pages/home': './src/pages/home.tsx',
+      'components/components': './src/components/components.tsx',
+      'components/display-value': './src/components/display-value.tsx',
+      'theme/colors': './src/theme/colors.ts',
+    },
+  },
 }
 export default defineConfig(config)
